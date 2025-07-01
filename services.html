@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device,inital-scale=1">
+    <title>Pinguin Publishing</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/styles.css">  
+        <nav>
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+          <h1>Our Publishing Services</h1>
+          <table class="services-table">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Curriculum Support</td>
+                <td>Tailored resources for NZ curriculum standards.</td>
+              </tr>
+              <tr>
+                <td>Custom Publishing</td>
+                <td>Personalised books and materials for your school.</td>
+              </tr>
+              <tr>
+                <td>Digital Resources</td>
+                <td>Interactive e-books and online materials.</td>
+              </tr>
+            </tbody>
+          </table>
+          <img src="images/download.jpeg" alt="Publishing services illustration" width="400">
+        </section>
+      </main>      
+    <footer>
+        <p>&copy; 2025 Pinguin Publishing</p>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+      // Get current page filename
+      const currentPage = location.pathname.split('/').pop();
+    
+      // Get all nav links
+      document.querySelectorAll('.nav a').forEach(link => {
+        // If link href matches current page, add 'active' class
+        if(link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+        // Optionally, highlight index.html for root URL
+        if(currentPage === '' && link.getAttribute('href') === 'index.html') {
+          link.classList.add('active');
+        }
+      });
+    </script>    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device,inital-scale=1">
+    <title>Pinguin Publishing</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/form.css">
+        <nav>
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1 style="text-align: center;">Contact Us</h1>
+            <section class="contact-section">
+                <div class="contact-intro">
+                  <h2 class="contact-title">Get in Touch</h2>
+                  <p class="contact-description">
+                    Fill out the form below and we'll get back to you as soon as possible.
+                  </p>
+                </div>
+              
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+              
+                  <input type="hidden" name="access_key" value="8f555d1b-09a3-4f7b-a4f9-67fa40047e6d" />
+                  <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+                  <input type="hidden" name="from_name" value="My Website" />
+                  <!-- More custom ization options available in the docs: https://docs.web3forms.com -->
+              
+                  <div class="form-group-container">
+                    <div class="form-group">
+                      <label for="name" class="form-label">Name</label>
+                      <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+                    </div>
+                    <div class="form-group">
+                      <label for="email" class="form-label">Email</label>
+                      <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+                    </div>
+                    <div class="form-group">
+                      <label for="phone" class="form-label">Phone</label>
+                      <input id="phone" name="phone" class="form-input" placeholder="+64 (234) 56789" type="text" />
+                    </div>
+                    <div class="form-group">
+                      <label for="message" class="form-label">Message</label>
+                      <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+                    </div>
+                  </div>
+                  <button class="form-submit" type="submit">Send Message</button>
+                </form>
+              </section>
+            <p>Office:</p>
+            <iframe width="100%" height="650px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NIWI3Tv9iDPrlnowr_0ZqZWoAQydKJU&q=15%20Sharples%20Place%2C%20Somerville%2C%20Auckland%2C%20New%20Zealand&maptype=satellite" allowfullscreen></iframe>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Pinguin Publishing</p>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+      // Get current page filename
+      const currentPage = location.pathname.split('/').pop();
+    
+      // Get all nav links
+      document.querySelectorAll('.nav a').forEach(link => {
+        // If link href matches current page, add 'active' class
+        if(link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+        }
+        // Optionally, highlight index.html for root URL
+        if(currentPage === '' && link.getAttribute('href') === 'index.html') {
+          link.classList.add('active');
+        }
+      });
+    </script>    
+</body>
+</html>
